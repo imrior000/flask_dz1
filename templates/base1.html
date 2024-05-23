@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>
+        {% block title %}
+            Титл страницы
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="block0">
+        <div class="block">
+            <div class="header">
+                <div class="logo">
+                    <a href="/" style="text-decoration: none;">
+                        <img src="/static/img/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="v_menu">
+                    <a href="/" class="knopka">Главная</a>
+                    <a href="/str1" class="knopka">Системные блоки</a>
+                    <a href="/str2" class="knopka">Мониторы</a>
+                    <a href="/str3" class="knopka">Моноблоки</a>
+                </div>
+            </div>
+        </div>
+        <div class="block">
+            <div class="otstup">
+                <div class="block_content">
+                    {% block content %}
+                        Контэнт
+                    {% endblock %}
+                </div>
+            </div>    
+        </div>
+        <div class="block">
+            <div class="footer" id="footer">
+                FOOTER
+            </div>
+        </div>
+    </div>
+</body>
+</html>
